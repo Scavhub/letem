@@ -1,0 +1,18 @@
+import ctypes
+
+# MessageBox parameters
+MB_OK = 0x0
+MB_ICONINFORMATION = 0x40
+MB_YESNO = 0x4
+
+response = ctypes.windll.user32.MessageBoxW(
+    None, 
+    "Do you want to continue?", 
+    "Question", 
+    MB_YESNO | MB_ICONINFORMATION
+)
+
+if response == 6:  # IDYES
+    print("User selected Yes.")
+elif response == 7:  # IDNO
+    print("User selected No.")
