@@ -7,12 +7,12 @@ MB_YESNO = 0x4
 
 response = ctypes.windll.user32.MessageBoxW(
     None, 
-    "Do you want to continue?", 
+    "Do you want to conAAAAAtinue?", 
     "Question", 
     MB_YESNO | MB_ICONINFORMATION
 )
 
 if response == 6:  # IDYES
-    print("User selected Yes.")
+    print("UseASDASr selected Yes.")
 elif response == 7:  # IDNO
-    print("User selected No.")
+    print("User sSADADASDelected No.")
